@@ -5,40 +5,46 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
 
-	public float m_Speed = 10.0f;
+	public float m_Speed = 50.0f;
 
-	private float amountOfRotate = 10;
+	public float amountOfRotate = 90;
 	private Rigidbody2D m_rigidbody;
+
+
 
 	// Use this for initialization
 	void Awake () {
+
 		m_rigidbody = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		Movement ();
-	}
 
-	private void Movement()
+    }
+
+
+    private void Movement()
 	{
 		// TODO: Replace GetKey() with GetAxis()
 		// W forward
-		if (Input.GetKey(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.W))
 			MoveFoward();
 		// S backwards
-		if (Input.GetKey(KeyCode.S))
+		if (Input.GetKeyDown(KeyCode.S))
 			MoveBackward();
 		// Left arrow rotate left
-		if (Input.GetKey ("right"))
+		if (Input.GetKeyDown ("right"))
 			Rotate (-amountOfRotate);
 		// Right arrow rotate right
-		if (Input.GetKey ("left"))
+		if (Input.GetKeyDown ("left"))
 			Rotate (amountOfRotate);
 	}
 
 	private void Rotate(float amount) {
 		// Rotate a set amount
+
 		transform.Rotate (new Vector3(0, 0, amount * m_Speed * Time.deltaTime));
 	}
 
@@ -49,4 +55,7 @@ public class PlayerMovement : MonoBehaviour {
 	private void MoveBackward() {
 		transform.position -= transform.up * Time.deltaTime * m_Speed;
 	}
+
+
+
 }
