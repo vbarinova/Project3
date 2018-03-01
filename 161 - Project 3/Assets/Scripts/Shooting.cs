@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour {
 
+	public GameObject m_BulletPrefab;
+
     private bool canShoot = true;
 
 	// Use this for initialization
@@ -24,6 +26,7 @@ public class Shooting : MonoBehaviour {
             || Input.GetKey(KeyCode.Slash) && Input.GetKey(KeyCode.Space)))
         {
             Debug.Log("Shots fired!");
+			Instantiate(m_BulletPrefab, transform.position, transform.rotation);
             canShoot = false;
         }
         else if (!canShoot && !Input.anyKey)
