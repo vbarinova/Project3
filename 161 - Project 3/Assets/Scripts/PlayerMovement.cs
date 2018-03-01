@@ -5,7 +5,7 @@ using UnityEngine;
 //[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
 
-	public float m_Speed = 50.0f;
+	public float m_Speed = 5.0f;
 
 	public float amountOfRotate = 90;
 	//private Rigidbody2D m_rigidbody;
@@ -29,10 +29,10 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		// TODO: Replace GetKey() with GetAxis()
 		// W forward
-		if (Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKey(KeyCode.W))
 			MoveFoward();
 		// S backwards
-		if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetKey(KeyCode.S))
 			MoveBackward();
 		// Left arrow rotate left
 		if (Input.GetKeyDown ("right"))

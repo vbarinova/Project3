@@ -14410,12 +14410,12 @@ Prefab:
     - target: {fileID: 114659471844810472, guid: f4dc634ec0f21064297d9f549f190d11,
         type: 2}
       propertyPath: amountOfRotate
-      value: 90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 114659471844810472, guid: f4dc634ec0f21064297d9f549f190d11,
         type: 2}
       propertyPath: m_Speed
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 61840401777282546, guid: f4dc634ec0f21064297d9f549f190d11,
         type: 2}
