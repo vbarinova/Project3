@@ -29,11 +29,15 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		// TODO: Replace GetKey() with GetAxis()
 		// W forward
-		if (Input.GetKey(KeyCode.W))
-			MoveFoward();
+		if (Input.GetKey (KeyCode.W)) {
+			MoveFoward ();
+			//MovePause ();
+		}
 		// S backwards
-		if (Input.GetKey(KeyCode.S))
-			MoveBackward();
+		if (Input.GetKey (KeyCode.S)) {
+			MoveBackward ();
+			//MovePause ();
+		}
 		// Left arrow rotate left
 		if (Input.GetKeyDown ("right"))
 			Rotate (-amountOfRotate);
@@ -55,6 +59,11 @@ public class PlayerMovement : MonoBehaviour {
 	private void MoveBackward() {
 		transform.position -= transform.up * Time.deltaTime * m_Speed;
 	}
+
+	// Trying to make a jumpy movement like the turning
+	//IEnumerator MovePause () {
+	//	yield return new WaitForSeconds (1);
+	//}
 
 
 
