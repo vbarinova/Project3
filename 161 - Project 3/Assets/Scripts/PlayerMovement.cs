@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float m_Speed = 5.0f;
 
-	public float amountOfRotate = 90;
+	public float amountOfRotate = 45;
 	//private Rigidbody2D m_rigidbody;
 
 
@@ -39,10 +39,10 @@ public class PlayerMovement : MonoBehaviour {
 			//MovePause ();
 		}
 		// Left arrow rotate left
-		if (Input.GetKeyDown ("right"))
+		if (Input.GetKey ("right"))
 			Rotate (-amountOfRotate);
 		// Right arrow rotate right
-		if (Input.GetKeyDown ("left"))
+		if (Input.GetKey ("left"))
 			Rotate (amountOfRotate);
 	}
 

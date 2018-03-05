@@ -14410,7 +14410,7 @@ Prefab:
     - target: {fileID: 114659471844810472, guid: f4dc634ec0f21064297d9f549f190d11,
         type: 2}
       propertyPath: amountOfRotate
-      value: 180
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 114659471844810472, guid: f4dc634ec0f21064297d9f549f190d11,
         type: 2}

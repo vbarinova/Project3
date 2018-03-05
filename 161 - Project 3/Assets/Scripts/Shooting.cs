@@ -29,7 +29,8 @@ public class Shooting : MonoBehaviour {
 			Instantiate(m_BulletPrefab, transform.position, transform.rotation);
             canShoot = false;
         }
-        else if (!canShoot && !Input.anyKey)
+        else if (!canShoot && !(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Slash)
+            || Input.GetKey(KeyCode.Slash) && Input.GetKey(KeyCode.Space)))
         {
             Debug.Log("Reload!");
             canShoot = true;
