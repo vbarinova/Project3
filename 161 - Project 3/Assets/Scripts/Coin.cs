@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour {
 		// Debug.Log("Touch the end of the level!");
 		if (trig.gameObject.tag == "Player") {
 			Debug.Log ("+1 to collected peices, yay");
+			DisplayUI.collectedShard ();
 			Destroy (gameObject);
 		}
 
