@@ -15541,7 +15541,7 @@ MonoBehaviour:
   xMax: 27
   xMin: -31
   yMax: 20
-  yMin: -22
+  yMin: -15
 --- !u!165 &2108029042
 AudioHighPassFilter:
   m_ObjectHideFlags: 0
