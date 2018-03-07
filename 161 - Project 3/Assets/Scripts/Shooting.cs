@@ -22,15 +22,15 @@ public class Shooting : MonoBehaviour {
 
     private void Shoot()
     {
-        if (canShoot && (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Slash)
-            || Input.GetKey(KeyCode.Slash) && Input.GetKey(KeyCode.Space)))
+        if (canShoot && (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Return)
+            || Input.GetKey(KeyCode.Return) && Input.GetKey(KeyCode.Space)))
         {
             Debug.Log("Shots fired!");
 			Instantiate(m_BulletPrefab, transform.position, transform.rotation);
             canShoot = false;
         }
-        else if (!canShoot && !(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Slash)
-            || Input.GetKey(KeyCode.Slash) && Input.GetKey(KeyCode.Space)))
+        else if (!canShoot && !(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Return)
+            || Input.GetKey(KeyCode.Return) && Input.GetKey(KeyCode.Space)))
         {
             Debug.Log("Reload!");
             canShoot = true;

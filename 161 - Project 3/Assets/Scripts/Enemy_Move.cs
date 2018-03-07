@@ -10,6 +10,7 @@ public class Enemy_Move : MonoBehaviour {
 
 	private float m_Speed = 15f;
 
+    private bool canShoot = true;
 
 	// Use this for initialization
 	void Start () {
@@ -22,17 +23,33 @@ public class Enemy_Move : MonoBehaviour {
 	}
 
 	private void Shoot() {
-		Instantiate(m_BulletPrefab, transform.position, transform.rotation);
+        if (canShoot)
+        {
+            Instantiate(m_BulletPrefab, transform.position, transform.rotation);
+            canShoot = false;
+            Invoke("ResetShoot", 1f);
+        }
+        
 	}
 		
 
-	private void OnTriggerEnter2D (Collider2D trig) {
-		transform.LookAt (playerLook);
+	private void OnTriggerStay2D (Collider2D trig) {
+        //playerLook = m_player.transform;
+        var dir = transform.position - m_player.transform.position;
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle+90, Vector3.forward);
 
-		if (trig.gameObject.tag == "Player") {
+        //transform.LookAt (playerLook);
+
+        if (trig.gameObject.tag == "Player") {
 			Debug.Log ("Enemy within range, shoot!");
 			Shoot ();
 		}
 
 	}
+
+    private void ResetShoot()
+    {
+        canShoot = true;
+    }
 }

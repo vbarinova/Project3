@@ -5,22 +5,30 @@ using UnityEngine;
 //[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
 
-	public float m_Speed = 5.0f;
+
+    public AudioSource coin_sound;
+
+    public float m_Speed = 5.0f;
 
 	public float amountOfRotate = 45;
-	//private Rigidbody2D m_rigidbody;
+    //private Rigidbody2D m_rigidbody;
 
+    public static bool collected_coin = false;
 
-
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake () {
 
 		//m_rigidbody = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Movement ();
+        if (collected_coin)
+        {
+            coin_sound.Play();
+            collected_coin = false;
+        }
+        Movement ();
 
     }
 

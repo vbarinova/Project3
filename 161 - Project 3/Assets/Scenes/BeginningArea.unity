@@ -249,14 +249,16 @@ MonoBehaviour:
 
     But it broke, merging your bodies into one entity.
 
+    Find all the missing pieces!
+
 
     Player 1: Use W and S to move forwards and backwards.
 
     Player 2: Use left and right arrows to rotate the single body.
 
 
-    To shoot, press both Left and Right ALT keys on the keyboard.
 
+    To shoot, press both Space and Enter keys on the keyboard.
 
 
     Now, to begin, shoot together.'

@@ -12,8 +12,8 @@ public class IntroScreenControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Slash)
-            || Input.GetKey(KeyCode.Slash) && Input.GetKey(KeyCode.Space)))
+        if ((Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Return)
+            || Input.GetKey(KeyCode.Return) && Input.GetKey(KeyCode.Space)))
         {
             SceneManager.LoadScene(2);
         }

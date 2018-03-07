@@ -27,4 +27,19 @@ public class Bullet : MonoBehaviour {
 	{
 		Destroy (gameObject);
 	}
+
+    private void OnTriggerEnter(Collider trig)
+    {
+
+        if (trig.gameObject.tag == "Player")
+        {
+            Debug.Log("PLAYER HIT");
+        }
+        if (trig.gameObject.tag == "Wall")
+        {
+            DestorySelf();
+        }
+
+    }
+
 }
