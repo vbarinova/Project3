@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Background
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Other
+    uniqueID: 2171599831
     locked: 0
   - name: Player
     uniqueID: 219747793
