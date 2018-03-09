@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Playtest2.unity
+- path: Assets/Scenes/3DVersion.unity
   isLoaded: 1
   isActive: 1
