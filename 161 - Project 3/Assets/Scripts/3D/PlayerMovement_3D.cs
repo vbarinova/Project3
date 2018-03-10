@@ -23,6 +23,7 @@ public class PlayerMovement_3D : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (collected_coin)
         {
             coin_sound.Play();
@@ -65,13 +66,24 @@ public class PlayerMovement_3D : MonoBehaviour {
 
     private void MoveFoward()
     {
-        transform.position -= transform.forward * Time.deltaTime * m_Speed;
+        transform.position += transform.forward * Time.deltaTime * m_Speed;
     }
 
     private void MoveBackward()
     {
-        transform.position += transform.forward * Time.deltaTime * m_Speed;
+        transform.position -= transform.forward * Time.deltaTime * m_Speed;
     }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("Hit wall");
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        }
+    }
+
 
     // Trying to make a jumpy movement like the turning
     //IEnumerator MovePause () {

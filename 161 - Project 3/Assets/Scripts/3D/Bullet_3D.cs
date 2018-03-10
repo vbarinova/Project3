@@ -21,7 +21,7 @@ public class Bullet_3D : MonoBehaviour
     private void FixedUpdate()
     {
         //transform.position += transform.forward * m_Speed * Time.deltaTime;
-        m_Rigidbody.MovePosition(m_Rigidbody.position + (-transform.forward) * m_Speed * Time.deltaTime);
+        m_Rigidbody.MovePosition(m_Rigidbody.position + (transform.forward) * m_Speed * Time.deltaTime);
     }
 
     private void DestorySelf()
