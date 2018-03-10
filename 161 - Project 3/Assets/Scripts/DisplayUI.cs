@@ -10,8 +10,8 @@ public class DisplayUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        numShards = 0;
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {

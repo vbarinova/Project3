@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 23210517483186056}
   - component: {fileID: 114015891850472222}
   - component: {fileID: 114038613433411562}
+  - component: {fileID: 114520070525528526}
   - component: {fileID: 54797887272882500}
   m_Layer: 0
   m_Name: Player3D
@@ -420,6 +421,19 @@ MonoBehaviour:
   coin_sound: {fileID: 82027477509396766}
   m_Speed: 5
   amountOfRotate: 45
+--- !u!114 &114520070525528526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198701289285588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4424c2e4a95f1544b5a56a2251aa01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameUI_Death: {fileID: 0}
+  HealthText: {fileID: 0}
 --- !u!114 &114784728086773962
 MonoBehaviour:
   m_ObjectHideFlags: 1

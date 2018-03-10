@@ -6,12 +6,12 @@ public class EnemyCanShoot_3D : MonoBehaviour {
 
    // public static EnemyCanShoot_3D enemyCanShoot;
 
-    public static bool canShoot = false;
+    public static bool canShoot;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        canShoot = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
