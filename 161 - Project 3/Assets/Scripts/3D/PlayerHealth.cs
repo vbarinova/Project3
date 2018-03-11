@@ -23,10 +23,10 @@ public class PlayerHealth : MonoBehaviour {
             GameUI_Death.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
-        if (Bullet_3D.s_PlayerHit)
+        if (EnemyBullet.s_PlayerHit)
         {
             HealthText.text = "Health: " + s_PlayerHealth.ToString();
-            Bullet_3D.s_PlayerHit = false;
+            EnemyBullet.s_PlayerHit = false;
         }
 	}
 

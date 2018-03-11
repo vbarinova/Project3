@@ -10,6 +10,8 @@ public class BossEnemy_NavScript : MonoBehaviour {
 
     NavMeshAgent _navMeshAgent;
 
+    private bool stall = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +31,8 @@ public class BossEnemy_NavScript : MonoBehaviour {
 
    void FixedUpdate()
     {
-        SetDestination();
+        if (!_navMeshAgent.isStopped)
+            SetDestination();
     }
 
     private void SetDestination()
@@ -39,7 +42,36 @@ public class BossEnemy_NavScript : MonoBehaviour {
             Vector3 targetVector = _destination.transform.position;
             _navMeshAgent.SetDestination(targetVector);
         }
+        //if (stall)
+        //{
+        //    _navMeshAgent.isStopped = true;
+        //}
     }
-	
-	
+
+
+    // Stalling enemy
+    private void OnTriggerEnter(Collider trig)
+    {
+        if (trig.gameObject.tag == "Bullet")
+        {
+            Debug.Log("STOPPPPPPPP");
+            //_navMeshAgent.isStopped = true;
+            StartCoroutine(Stall());
+            //_navMeshAgent.isStopped = true;
+        }
+    }
+
+    private IEnumerator Stall()
+    {
+        //stall = true;
+        _navMeshAgent.isStopped = true;
+        Debug.Log("Stalled yo");
+        yield return new WaitForSeconds(4f);
+        _navMeshAgent.isStopped = false;
+        Debug.Log("Unstalled");
+        //stall = false;
+    }
+
+
+
 }
