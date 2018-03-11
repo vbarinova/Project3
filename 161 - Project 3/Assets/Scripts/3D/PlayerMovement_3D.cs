@@ -9,15 +9,16 @@ public class PlayerMovement_3D : MonoBehaviour {
     public float m_Speed = 5.0f;
 
     public float amountOfRotate = 45;
-    //private Rigidbody2D m_rigidbody;
 
     public static bool collected_coin = false;
+
+    private bool canMove = false;
 
     // Use this for initialization
     void Awake()
     {
 
-        //m_rigidbody = GetComponent<Rigidbody2D> ();
+        Invoke("animDone", 3f);
     }
 
     // Update is called once per frame
@@ -29,7 +30,8 @@ public class PlayerMovement_3D : MonoBehaviour {
             coin_sound.Play();
             collected_coin = false;
         }
-        Movement();
+        if (canMove)
+            Movement();
 
     }
 
@@ -85,8 +87,8 @@ public class PlayerMovement_3D : MonoBehaviour {
     }
 
 
-    // Trying to make a jumpy movement like the turning
-    //IEnumerator MovePause () {
-    //	yield return new WaitForSeconds (1);
-    //}
+    private void animDone()
+    {
+        canMove = true;
+    }
 }
