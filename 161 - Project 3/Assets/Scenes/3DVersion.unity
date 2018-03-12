@@ -280,6 +280,16 @@ Prefab:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114030609307988068, guid: a3f00a368f181dd428a252ff6a719deb,
+        type: 2}
+      propertyPath: m_Collider
+      value: 
+      objectReference: {fileID: 1666288394}
+    - target: {fileID: 114030609307988068, guid: a3f00a368f181dd428a252ff6a719deb,
+        type: 2}
+      propertyPath: m_renderer
+      value: 
+      objectReference: {fileID: 1666288393}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3f00a368f181dd428a252ff6a719deb, type: 2}
   m_IsPrefabParent: 0
@@ -3326,9 +3336,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Minotaur is
-
-    Approaching'
+  m_Text: "Minotaur \nhas Awoken"
 --- !u!222 &1335278746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4317,6 +4325,16 @@ Prefab:
 --- !u!1 &1666288388 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1721734829571118, guid: a3f00a368f181dd428a252ff6a719deb,
+    type: 2}
+  m_PrefabInternal: {fileID: 19748560}
+--- !u!23 &1666288393 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23547328086376686, guid: a3f00a368f181dd428a252ff6a719deb,
+    type: 2}
+  m_PrefabInternal: {fileID: 19748560}
+--- !u!65 &1666288394 stripped
+BoxCollider:
+  m_PrefabParentObject: {fileID: 65736592054112106, guid: a3f00a368f181dd428a252ff6a719deb,
     type: 2}
   m_PrefabInternal: {fileID: 19748560}
 --- !u!65 &1666288396

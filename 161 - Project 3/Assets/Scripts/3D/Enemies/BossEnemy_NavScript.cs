@@ -10,12 +10,20 @@ public class BossEnemy_NavScript : MonoBehaviour {
 
     NavMeshAgent _navMeshAgent;
 
+    public static bool s_PlayerHit;
+    public Collider m_Collider;
+    public Renderer m_renderer;
+
     private bool stall = false;
+    private bool canHurtPlayer = true;
 
 
 	// Use this for initialization
 	void Start () {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        gameObject.SetActive(true);
+        m_Collider.enabled = true;
+        m_renderer.enabled = true;
 
         if (_navMeshAgent == null)
         {
@@ -57,7 +65,12 @@ public class BossEnemy_NavScript : MonoBehaviour {
             Debug.Log("STOPPPPPPPP");
             //_navMeshAgent.isStopped = true;
             StartCoroutine(Stall());
+            //StartCoroutine(DoBlinks(1f, 0.5f));
             //_navMeshAgent.isStopped = true;
+        }
+        if (trig.gameObject.tag == "Player" && canHurtPlayer)
+        {
+            s_PlayerHit = true;
         }
     }
 
@@ -65,13 +78,41 @@ public class BossEnemy_NavScript : MonoBehaviour {
     {
         //stall = true;
         _navMeshAgent.isStopped = true;
-        Debug.Log("Stalled yo");
-        yield return new WaitForSeconds(4f);
+        canHurtPlayer = false;
+        m_Collider.enabled = false;
+        blink();
+        Debug.Log("Stalled Boss");
+        yield return new WaitForSeconds(5f);
         _navMeshAgent.isStopped = false;
-        Debug.Log("Unstalled");
+        canHurtPlayer = true;
+        m_Collider.enabled = false;
+        Debug.Log("Unstalled boss");
         //stall = false;
     }
 
+    private void blink()
+    {
+        StartCoroutine(DoBlinks(.2f, 0.5f));
+    }
+
+    private IEnumerator DoBlinks(float duration, float blinkTime)
+    {
+        while(duration > 0f)
+        {
+            duration -= Time.deltaTime;
+           // Debug.Log("Duration: " + duration);
+
+            // toggle renderer
+            m_renderer.enabled = !m_renderer.enabled;
+
+            // wait for a bt
+            yield return new WaitForSeconds(blinkTime);
+
+        }
+
+        // make sure renderer is enabled when we exit
+        m_renderer.enabled = true;
+    }
 
 
 }
