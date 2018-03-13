@@ -1595,7 +1595,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 466697528}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &466697530
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PauseMenu: {fileID: 1979138937}
-  m_AudioControl: {fileID: 466697528}
+  m_AudioControl: {fileID: 2073243723}
 --- !u!4 &1332384679
 Transform:
   m_ObjectHideFlags: 0
@@ -5716,3 +5716,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0c756e47ea2d34581d6a649c108c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &2073243732
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073243723}
+  m_Enabled: 1
+--- !u!165 &2073243733
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073243723}
+  m_Enabled: 1
+  m_CutoffFrequency: 2000
+  m_HighpassResonanceQ: 1
