@@ -15,7 +15,7 @@ public class IntroScreenControl : MonoBehaviour {
         if ((Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Return)
             || Input.GetKey(KeyCode.Return) && Input.GetKey(KeyCode.Space)))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
     }
