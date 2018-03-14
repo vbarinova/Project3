@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 13
+  controlID: 117
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,14 +201,14 @@ MonoBehaviour:
     y: 0
     width: 951
     height: 514
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 36
+  controlID: 148
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,8 +251,8 @@ MonoBehaviour:
     y: 0
     width: 570
     height: 433
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -284,7 +284,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 20}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -303,8 +303,8 @@ MonoBehaviour:
     y: 0
     width: 560
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -415,28 +415,28 @@ MonoBehaviour:
     height: 493
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a2c0000
-    m_LastClickedID: 11274
-    m_ExpandedIDs: 20e3fcffbefaffff9efbffff00000000c62a0000d42a00001a2b0000702b0000842b0000922b0000aa2b0000d82b0000e42b00001e2c0000442c0000882c0000
+    m_SelectedIDs: 362c0000
+    m_LastClickedID: 11318
+    m_ExpandedIDs: 9efbffff00000000c02b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SpiderSprite
-      m_OriginalName: SpiderSprite
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -144924
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - 3DVersion
+  - 3DVersionPixely
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -467,14 +467,14 @@ MonoBehaviour:
     width: 947
     height: 493
   m_SceneLighting: 1
-  lastFramingTime: 3724.829682627586
-  m_2DMode: 0
+  lastFramingTime: 162.9664153594774
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 373.45508, y: 47.125, z: 82.125}
+    m_Target: {x: 106.485214, y: -1.2943382, z: 51.39323}
     speed: 2
-    m_Value: {x: 373.45508, y: 47.125, z: 82.125}
+    m_Value: {x: 106.485214, y: -1.2943382, z: 51.39323}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -489,21 +489,21 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
-    m_Target: {x: 0.20193261, y: 0.024971636, z: -0.0051504006, w: 0.97906744}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0.20193262, y: 0.024971638, z: -0.005150401, w: 0.9790675}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 465.86337
+    m_Target: 42.168983
     speed: 2
-    m_Value: 465.86337
+    m_Value: 42.168983
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -537,10 +537,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 468
-    y: 181
-    width: 973
-    height: 501
+    x: 411
+    y: 92
+    width: 947
+    height: 493
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -579,20 +579,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Art
+    - Assets/Pixelation/Shaders
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Art
+  - Assets/Pixelation/Shaders
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\I is cooler then you\Documents\GitHub\Project3\161 -
     Project 3
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6c2a0000
-    m_LastClickedID: 10860
-    m_ExpandedIDs: 00000000602800006e28000098280000f02800009229000000ca9a3bffffff7f
+    m_SelectedIDs: b6290000
+    m_LastClickedID: 10678
+    m_ExpandedIDs: 000000007028000082280000ae2800001c290000e029000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000602800006e28000098280000f028000092290000
+    m_ExpandedIDs: 000000007028000082280000ae2800001c290000e0290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 5e46fffff02e0000602d0000aa2d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
