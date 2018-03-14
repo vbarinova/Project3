@@ -16,7 +16,7 @@ public class DisplayUI : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		ShardsLeftUI.gameObject.GetComponent<Text>().text = ("Shards: " + (10 - numShards));
+		ShardsLeftUI.gameObject.GetComponent<Text>().text = (" S h a r d s :  " + (10 - numShards));
 		
 	}
 

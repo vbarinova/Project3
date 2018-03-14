@@ -9,7 +9,7 @@ public class BossApprocahing : MonoBehaviour {
     void Start()
     {
         gameObject.SetActive(false);
-        Invoke("reActivate", 4f);
+        Invoke("reActivate", 7f);
 
     }
 

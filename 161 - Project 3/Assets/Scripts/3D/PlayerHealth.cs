@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        s_PlayerHealth = 5;
+        s_PlayerHealth = 8;
         HealthText.text = "Health: " + s_PlayerHealth.ToString();
     }
 	
