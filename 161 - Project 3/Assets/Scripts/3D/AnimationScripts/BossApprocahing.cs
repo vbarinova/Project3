@@ -5,9 +5,13 @@ using UnityEngine;
 public class BossApprocahing : MonoBehaviour {
 
     public CanvasGroup uiElement;
+    public AudioClip displaySound;
+
+    private AudioSource source;
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
         gameObject.SetActive(false);
         Invoke("reActivate", 7f);
 
@@ -16,6 +20,7 @@ public class BossApprocahing : MonoBehaviour {
     private void reActivate()
     {
         gameObject.SetActive(true);
+        source.PlayOneShot(displaySound, .3f);
         Invoke("deActivate", 3f);
     }
 

@@ -5,11 +5,14 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 
 	public GameObject m_BulletPrefab;
+    public AudioClip shootSound;
 
     private bool canShoot = true;
+    private AudioSource source;
 
 	// Use this for initialization
 	void Start () {
+        source = GetComponent<AudioSource>();
 		
 	}
 	
@@ -26,6 +29,7 @@ public class Shooting : MonoBehaviour {
             || Input.GetKey(KeyCode.Return) && Input.GetKey(KeyCode.Space)))
         {
             Debug.Log("Shots fired!");
+            source.PlayOneShot(shootSound, .3f);
 			Instantiate(m_BulletPrefab, transform.position, transform.rotation);
             canShoot = false;
         }

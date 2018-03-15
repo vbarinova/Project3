@@ -16,6 +16,7 @@ public class BossEnemy_NavScript : MonoBehaviour {
 
     private bool stall = false;
     private bool canHurtPlayer = true;
+    private float m_speed = 4.3f;
 
 
 	// Use this for initialization
@@ -24,6 +25,8 @@ public class BossEnemy_NavScript : MonoBehaviour {
         gameObject.SetActive(true);
         m_Collider.enabled = true;
         m_renderer.enabled = true;
+
+        _navMeshAgent.speed = m_speed;
 
         if (_navMeshAgent == null)
         {

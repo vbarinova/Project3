@@ -7,15 +7,18 @@ public class StationaryEnemy_3D : MonoBehaviour {
     public GameObject m_BulletPrefab;
     public GameObject m_player;
     public Transform playerLook;
+    public AudioClip shootSound;
 
     private float m_Speed = 15f;
 
     private bool canShoot = true;
+    private AudioSource source;
 
     // Use this for initialization
     void Start()
     {
         m_player = GameObject.FindGameObjectWithTag("Player");
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,7 +39,8 @@ public class StationaryEnemy_3D : MonoBehaviour {
 
     private void Shoot()
     {
-         Instantiate(m_BulletPrefab, transform.position, transform.rotation);
+        source.PlayOneShot(shootSound, .02f);
+        Instantiate(m_BulletPrefab, transform.position, transform.rotation);
          canShoot = false;
          Invoke("ResetShoot", 1f);
 

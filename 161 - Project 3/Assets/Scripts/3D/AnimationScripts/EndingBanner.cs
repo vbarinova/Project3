@@ -5,32 +5,42 @@ using UnityEngine;
 public class EndingBanner : MonoBehaviour {
 
     public CanvasGroup uiElement;
+    public AudioClip displaySound;
+
+    private AudioSource source;
+    private bool done = false;
 
     void Start()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        source = GetComponent<AudioSource>();
+        uiElement.alpha = 0;
 
     }
 
     void Update()
     {
-        if (10 - DisplayUI.numShards == 0)
+        if (10 - DisplayUI.numShards == 0 && !done)
         {
             //reActivate();
-            gameObject.SetActive(true);
-            Invoke("deActivate", 3f);
+            //gameObject.SetActive(true);
+            done = true;
+            Invoke("reActivate", .5f);
         }
     }
 
     private void reActivate()
     {
-        gameObject.SetActive(true);
+        //gameObject.SetActive(true);
+        source.PlayOneShot(displaySound, .3f);
+        uiElement.alpha = 1;
         Invoke("deActivate", 3f);
     }
 
     private void deActivate()
     {
         FadeOut();
+        
     }
 
 

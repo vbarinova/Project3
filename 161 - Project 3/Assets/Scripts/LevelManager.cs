@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void MoveScene(int level)
     {
         Time.timeScale = 1f;
