@@ -13,7 +13,7 @@ public class BossApprocahing : MonoBehaviour {
     {
         source = GetComponent<AudioSource>();
         gameObject.SetActive(false);
-        Invoke("reActivate", 7f);
+        Invoke("reActivate", 10f);
 
     }
 
