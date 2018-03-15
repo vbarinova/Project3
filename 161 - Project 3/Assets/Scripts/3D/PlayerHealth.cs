@@ -9,8 +9,13 @@ public class PlayerHealth : MonoBehaviour {
     public Canvas GameUI_Death;
     public Text HealthText;
 
-	// Use this for initialization
-	void Start () {
+
+    public GameObject currentMusic;
+    public GameObject endMusic;
+    public GameObject boss;
+
+    // Use this for initialization
+    void Start () {
         s_PlayerHealth = 8;
         HealthText.text = "Health: " + s_PlayerHealth.ToString();
     }
@@ -19,8 +24,11 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
         if (s_PlayerHealth <= 0 && Time.timeScale == 1f)
         {
-            gameObject.SetActive(false);
+            boss.SetActive(false);
             GameUI_Death.gameObject.SetActive(true);
+            currentMusic.SetActive(false);
+            endMusic.SetActive(true);
+
             Time.timeScale = 0f;
         }
         if (EnemyBullet.s_PlayerHit)
